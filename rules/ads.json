@@ -2,164 +2,247 @@
   {
     "id": 1,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "requestDomains": [
-        "doubleclick.net",
-        "googlesyndication.com",
-        "googleadservices.com",
-        "googletagservices.com",
-        "adservice.google.com",
-        "adservice.google.co.jp",
-        "amazon-adsystem.com",
-        "adnxs.com",
+        "2mdn.net",
+        "33across.com",
+        "360yield.com",
+        "3lift.com",
+        "4dex.io",
+        "a-mo.net",
+        "a-mx.com",
+        "a.mm.vc",
+        "a8.net",
+        "aaxads.com",
+        "accesstrade.net",
+        "ad-m.asia",
+        "ad-stir.com",
+        "adform.com",
+        "adform.net",
+        "adingo.jp",
+        "adleadevent.com",
+        "adm.shinobi.jp",
+        "admatic.com.tr",
         "adnxs-simple.com",
-        "rubiconproject.com",
-        "pubmatic.com",
-        "openx.net",
+        "adnxs.com",
+        "adpushup.com",
+        "adroll.com",
+        "ads.yahoo.co.jp",
+        "adsafeprotected.com",
+        "adservice.google.co.jp",
+        "adservice.google.com",
+        "adsrvr.org",
+        "adtarget.biz",
+        "adtechus.com",
+        "adtelligent.com",
+        "adtrafficquality.google",
+        "advertising.com",
+        "advg.jp",
+        "affec.tv",
+        "amazon-adsystem.com",
+        "authorizedvault.com",
+        "biddertmz.com",
+        "bidswitch.net",
+        "bluekai.com",
+        "braveglobal.tv",
+        "casalemedia.com",
+        "contextualadv.com",
+        "creativecdn.com",
         "criteo.com",
         "criteo.net",
-        "casalemedia.com",
-        "smartadserver.com",
-        "sharethrough.com",
-        "33across.com",
-        "yieldmo.com",
-        "teads.tv",
-        "taboola.com",
-        "taboolasyndication.com",
-        "outbrain.com",
-        "zemanta.com",
-        "media.net",
-        "mgid.com",
-        "revcontent.com",
-        "adsafeprotected.com",
-        "moatads.com",
-        "adform.net",
-        "adroll.com",
-        "bidswitch.net",
+        "crwdcntrl.net",
         "districtm.io",
-        "indexww.com",
-        "lijit.com",
-        "gumgum.com",
-        "sovrn.com",
-        "spotxchange.com",
-        "spotx.tv",
-        "tremorhub.com",
-        "innovid.com",
-        "flashtalking.com",
-        "servedbyadbutler.com",
-        "adsrvr.org",
-        "advertising.com",
-        "adtechus.com",
-        "yieldlab.net",
-        "improvedigital.com",
-        "onetag-sys.com",
-        "quantserve.com",
-        "bluekai.com",
+        "doubleclick.net",
+        "eu-1-id5-sync.com",
         "exelator.com",
-        "popads.net",
-        "popcash.net",
-        "propellerads.com",
-        "onclickalgo.com",
-        "hilltopads.net",
         "exoclick.com",
-        "juicyads.com",
-        "trafficjunky.net",
-        "i-mobile.co.jp",
-        "microad.jp",
-        "microad.net",
+        "flashtalking.com",
+        "flux-cdn.com",
+        "flux.jp",
         "fout.jp",
-        "ad-stir.com",
+        "fundingchoicesmessages.google.com",
+        "fwmrm.net",
+        "geniee.jp",
         "genieesspv.jp",
+        "googleadservices.com",
+        "googlesyndication.com",
+        "googletagservices.com",
         "gsspat.jp",
         "gssprt.jp",
-        "socdm.com",
-        "impact-ad.jp",
-        "adingo.jp",
+        "gumgum.com",
+        "hilltopads.net",
+        "hyth.io",
+        "i-mobile.co.jp",
+        "id5-sync.com",
         "im-apps.net",
-        "popin.cc",
+        "imasdk.googleapis.com",
+        "impact-ad.jp",
+        "improvedigital.com",
+        "indexww.com",
+        "innovid.com",
+        "intentiq.com",
+        "juicyads.com",
+        "lijit.com",
+        "linksynergy.com",
         "logly.co.jp",
-        "nakanohito.jp",
-        "advg.jp",
-        "ad-m.asia",
-        "rtoaster.jp",
-        "yads.c.yimg.jp",
-        "ads.yahoo.co.jp",
-        "adm.shinobi.jp",
-        "a.mm.vc",
+        "media.net",
         "mediaad.org",
-        "zucks.net",
-        "aaxads.com",
-        "rakuten-ad.net",
+        "mediago.io",
+        "mgid.com",
+        "microad.jp",
+        "microad.net",
+        "moatads.com",
+        "nakanohito.jp",
+        "nexx360.io",
+        "onclickalgo.com",
+        "onetag-sys.com",
+        "openx.net",
+        "outbrain.com",
+        "pbstck.com",
+        "pbxai.com",
+        "popads.net",
+        "popcash.net",
+        "popin.cc",
+        "propellerads.com",
+        "pubmatic.com",
+        "quantserve.com",
         "r-ad.ne.jp",
+        "rakuten-ad.net",
+        "revcontent.com",
+        "richaudience.com",
+        "rlcdn.com",
+        "rtoaster.jp",
+        "rubiconproject.com",
+        "sascdn.com",
+        "servedbyadbutler.com",
+        "sharethrough.com",
+        "smartadserver.com",
+        "smilewanted.com",
+        "socdm.com",
+        "sovrn.com",
+        "sp-gn.com",
+        "sparteo.com",
+        "spotx.tv",
+        "spotxchange.com",
+        "taboola.com",
+        "taboolasyndication.com",
+        "teads.tv",
+        "themoneytizer.com",
+        "themoneytizer.fr",
+        "trafficjunky.net",
+        "tremorhub.com",
+        "trustedstack.com",
+        "unrulymedia.com",
         "valuecommerce.com",
-        "a8.net",
-        "accesstrade.net",
-        "linksynergy.com"
+        "yads.c.yimg.jp",
+        "yieldlab.net",
+        "yieldmo.com",
+        "zemanta.com",
+        "zucks.net"
       ]
     }
   },
   {
     "id": 2,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||google.com/pagead/",
-      "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest"]
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "image",
+        "xmlhttprequest"
+      ]
     }
   },
   {
     "id": 3,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "/adsbygoogle.js",
-      "resourceTypes": ["script"]
+      "resourceTypes": [
+        "script"
+      ]
     }
   },
   {
     "id": 4,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "/prebid",
-      "resourceTypes": ["script"]
+      "resourceTypes": [
+        "script"
+      ]
     }
   },
   {
     "id": 5,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "/googletag",
-      "resourceTypes": ["script"]
+      "resourceTypes": [
+        "script"
+      ]
     }
   },
   {
     "id": 6,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "/advertisement",
-      "resourceTypes": ["script", "sub_frame", "image"]
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "image"
+      ]
     }
   },
   {
     "id": 7,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "/ad-banner",
-      "resourceTypes": ["script", "sub_frame", "image"]
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "image"
+      ]
     }
   },
   {
     "id": 8,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "/banner-ad",
-      "resourceTypes": ["script", "sub_frame", "image"]
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "image"
+      ]
     }
   }
 ]
