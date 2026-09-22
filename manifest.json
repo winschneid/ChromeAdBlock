@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Ad Blocker (ホワイトリスト対応)",
+  "version": "1.0.0",
+  "description": "広告をブロックします。信頼するサイトはホワイトリストに追加して広告を許可できます。",
+  "minimum_chrome_version": "121",
+
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Simple Ad Blocker",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "options_page": "options.html",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ads",
+        "enabled": true,
+        "path": "rules/ads.json"
+      },
+      {
+        "id": "tracking",
+        "enabled": false,
+        "path": "rules/tracking.json"
+      }
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["hide.css"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

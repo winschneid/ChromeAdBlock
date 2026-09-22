@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Simple Ad Blocker 設定</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg:#f6f7f9; --card:#ffffff; --fg:#1b1c1e; --muted:#6b7280;
+    --line:#e5e7eb; --accent:#2563eb; --danger:#dc2626;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#17181a; --card:#1e1f22; --fg:#e8e9ea; --muted:#9aa0a6; --line:#34363a; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:32px 20px; background:var(--bg); color:var(--fg);
+    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size:14px; line-height:1.6;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  h1 { font-size:19px; margin:0 0 20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin-bottom:16px; }
+  h2 { font-size:14px; margin:0 0 4px; }
+  .desc { color:var(--muted); font-size:12.5px; margin:0 0 14px; }
+  .row { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:10px 0; }
+  .row + .row { border-top:1px solid var(--line); }
+  .row .sub { color:var(--muted); font-size:12px; }
+  .switch { position:relative; flex:none; width:40px; height:22px; margin-top:2px; }
+  .switch input { opacity:0; width:0; height:0; }
+  .slider { position:absolute; inset:0; cursor:pointer; background:#9ca3af; border-radius:22px; transition:background .15s; }
+  .slider::before { content:""; position:absolute; height:18px; width:18px; left:2px; top:2px; background:#fff; border-radius:50%; transition:transform .15s; }
+  input:checked + .slider { background:var(--accent); }
+  input:checked + .slider::before { transform:translateX(18px); }
+  form.add { display:flex; gap:8px; margin-bottom:14px; }
+  input[type=text] {
+    flex:1; padding:8px 10px; border:1px solid var(--line); border-radius:6px;
+    background:var(--bg); color:var(--fg); font:inherit;
+  }
+  button.primary {
+    padding:8px 14px; border:none; border-radius:6px; background:var(--accent);
+    color:#fff; font:inherit; font-weight:500; cursor:pointer;
+  }
+  ul { list-style:none; margin:0; padding:0; }
+  li {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:9px 2px; border-top:1px solid var(--line); font-variant-numeric:tabular-nums;
+  }
+  li .domain { word-break:break-all; }
+  button.remove { background:none; border:none; color:var(--danger); font:inherit; cursor:pointer; padding:2px 4px; }
+  button.remove:hover { text-decoration:underline; }
+  .empty { color:var(--muted); font-size:12.5px; padding:14px 0; border-top:1px solid var(--line); }
+  .note { color:var(--muted); font-size:12px; margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Simple Ad Blocker の設定</h1>
+
+  <div class="card">
+    <h2>動作</h2>
+    <p class="desc">変更はすぐ反映されます(開いているタブは再読み込みしてください)。</p>
+
+    <div class="row">
+      <div>
+        <div>広告ブロックを有効にする</div>
+        <div class="sub">OFFにするとすべてのサイトで停止します</div>
+      </div>
+      <label class="switch"><input type="checkbox" id="enabled"><span class="slider"></span></label>
+    </div>
+
+    <div class="row">
+      <div>
+        <div>広告枠の残骸を隠す(CSS)</div>
+        <div class="sub">ブロック後に残る空白のスペースを畳みます</div>
+      </div>
+      <label class="switch"><input type="checkbox" id="cosmetic"><span class="slider"></span></label>
+    </div>
+
+    <div class="row">
+      <div>
+        <div>アクセス解析・トラッキングもブロック</div>
+        <div class="sub">Google Analytics 等。サイトの機能に影響する場合があります</div>
+      </div>
+      <label class="switch"><input type="checkbox" id="blockTracking"><span class="slider"></span></label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>ホワイトリスト(広告を許可するサイト)</h2>
+    <p class="desc">ここに登録したサイトでは広告ブロックを行いません。サブドメインも含めて許可されます(例: <code>example.com</code> は <code>news.example.com</code> も対象)。</p>
+
+    <form class="add" id="addForm">
+      <input type="text" id="domainInput" placeholder="example.com または https://example.com/..." autocomplete="off">
+      <button class="primary" type="submit">追加</button>
+    </form>
+
+    <ul id="list"></ul>
+    <div class="empty" id="empty">まだ登録されていません。</div>
+    <p class="note">ページを開いた状態でツールバーのアイコンから切り替えると、その場で登録/解除できます。</p>
+  </div>
+</div>
+<script src="options.js"></script>
+</body>
+</html>

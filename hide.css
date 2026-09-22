@@ -1,0 +1,53 @@
+/*
+ * 通信ブロック後に残る「空の広告枠」を隠すためのCSS。
+ * すべてのセレクタを html:not(.abw-allow) で囲っているので、
+ * content.js が <html> に .abw-allow を付けた瞬間(=ホワイトリスト/機能OFF)に
+ * すべて無効化される。
+ *
+ * 誤検知でページが崩れる場合は、該当行を削除して拡張機能を再読み込みしてください。
+ */
+
+html:not(.abw-allow) ins.adsbygoogle,
+html:not(.abw-allow) .adsbygoogle,
+html:not(.abw-allow) iframe[src*="doubleclick.net"],
+html:not(.abw-allow) iframe[src*="googlesyndication.com"],
+html:not(.abw-allow) iframe[src*="googleadservices.com"],
+html:not(.abw-allow) iframe[src*="amazon-adsystem.com"],
+html:not(.abw-allow) iframe[src*="adnxs.com"],
+html:not(.abw-allow) iframe[src*="criteo"],
+html:not(.abw-allow) iframe[src*="taboola"],
+html:not(.abw-allow) iframe[src*="outbrain"],
+html:not(.abw-allow) iframe[src*="i-mobile.co.jp"],
+html:not(.abw-allow) iframe[src*="microad"],
+html:not(.abw-allow) iframe[src*="socdm.com"],
+html:not(.abw-allow) iframe[id^="google_ads_iframe"],
+html:not(.abw-allow) iframe[id^="aswift_"],
+html:not(.abw-allow) iframe[name^="google_ads_iframe"],
+html:not(.abw-allow) div[id^="div-gpt-ad"],
+html:not(.abw-allow) div[id^="google_ads_"],
+html:not(.abw-allow) div[id^="gpt-ad"],
+html:not(.abw-allow) div[id^="ad-slot"],
+html:not(.abw-allow) div[id^="ad_slot"],
+html:not(.abw-allow) div[class^="ad-slot"],
+html:not(.abw-allow) div[class*="advertisement"],
+html:not(.abw-allow) div[class*="ad-banner"],
+html:not(.abw-allow) div[class*="banner-ad"],
+html:not(.abw-allow) div[data-ad-slot],
+html:not(.abw-allow) #taboola-below-article-thumbnails,
+html:not(.abw-allow) .trc_related_container,
+html:not(.abw-allow) .OUTBRAIN,
+html:not(.abw-allow) .ob-widget,
+html:not(.abw-allow) .popin_recommend,
+html:not(.abw-allow) [id^="popin_recommend"],
+html:not(.abw-allow) [aria-label="Advertisement"],
+html:not(.abw-allow) [aria-label="広告"] {
+  display: none !important;
+}
+
+/* 上下に貼り付く追従広告(スペースだけ残るタイプ) */
+html:not(.abw-allow) .sticky-ad,
+html:not(.abw-allow) .ad-sticky,
+html:not(.abw-allow) [class*="overlay-ad"],
+html:not(.abw-allow) [class*="ad-overlay"] {
+  display: none !important;
+}

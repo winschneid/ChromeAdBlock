@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "requestDomains": [
+        "doubleclick.net",
+        "googlesyndication.com",
+        "googleadservices.com",
+        "googletagservices.com",
+        "adservice.google.com",
+        "adservice.google.co.jp",
+        "amazon-adsystem.com",
+        "adnxs.com",
+        "adnxs-simple.com",
+        "rubiconproject.com",
+        "pubmatic.com",
+        "openx.net",
+        "criteo.com",
+        "criteo.net",
+        "casalemedia.com",
+        "smartadserver.com",
+        "sharethrough.com",
+        "33across.com",
+        "yieldmo.com",
+        "teads.tv",
+        "taboola.com",
+        "taboolasyndication.com",
+        "outbrain.com",
+        "zemanta.com",
+        "media.net",
+        "mgid.com",
+        "revcontent.com",
+        "adsafeprotected.com",
+        "moatads.com",
+        "adform.net",
+        "adroll.com",
+        "bidswitch.net",
+        "districtm.io",
+        "indexww.com",
+        "lijit.com",
+        "gumgum.com",
+        "sovrn.com",
+        "spotxchange.com",
+        "spotx.tv",
+        "tremorhub.com",
+        "innovid.com",
+        "flashtalking.com",
+        "servedbyadbutler.com",
+        "adsrvr.org",
+        "advertising.com",
+        "adtechus.com",
+        "yieldlab.net",
+        "improvedigital.com",
+        "onetag-sys.com",
+        "quantserve.com",
+        "bluekai.com",
+        "exelator.com",
+        "popads.net",
+        "popcash.net",
+        "propellerads.com",
+        "onclickalgo.com",
+        "hilltopads.net",
+        "exoclick.com",
+        "juicyads.com",
+        "trafficjunky.net",
+        "i-mobile.co.jp",
+        "microad.jp",
+        "microad.net",
+        "fout.jp",
+        "ad-stir.com",
+        "genieesspv.jp",
+        "gsspat.jp",
+        "gssprt.jp",
+        "socdm.com",
+        "impact-ad.jp",
+        "adingo.jp",
+        "im-apps.net",
+        "popin.cc",
+        "logly.co.jp",
+        "nakanohito.jp",
+        "advg.jp",
+        "ad-m.asia",
+        "rtoaster.jp",
+        "yads.c.yimg.jp",
+        "ads.yahoo.co.jp",
+        "adm.shinobi.jp",
+        "a.mm.vc",
+        "mediaad.org",
+        "zucks.net",
+        "aaxads.com",
+        "rakuten-ad.net",
+        "r-ad.ne.jp",
+        "valuecommerce.com",
+        "a8.net",
+        "accesstrade.net",
+        "linksynergy.com"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||google.com/pagead/",
+      "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/adsbygoogle.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/prebid",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/googletag",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/advertisement",
+      "resourceTypes": ["script", "sub_frame", "image"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/ad-banner",
+      "resourceTypes": ["script", "sub_frame", "image"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "/banner-ad",
+      "resourceTypes": ["script", "sub_frame", "image"]
+    }
+  }
+]
