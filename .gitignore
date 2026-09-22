@@ -1,0 +1,7 @@
+# Chrome が unpacked 拡張の読み込み時に生成する(コンパイル済みDNRルールなど)
+_metadata/
+
+# OS / エディタ
+Thumbs.db
+.DS_Store
+.vscode/
